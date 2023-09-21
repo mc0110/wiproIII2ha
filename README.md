@@ -50,6 +50,10 @@ ESPHOME-Code:
 ### Readout status of central locking
 The status of the central locking system can be registered via two optocouplers running in opposite directions. The pulses (+/-12V) for door opening / locking can thus be reliably detected (2 inputs). With the circuit, the lock is also detected if the second hand transmitter or the vehicle key was used for the lock.
 
+#### RV central locking door plug (FIAT Ducato)
+![grafik](https://github.com/mc0110/wiproIII2ha/assets/10268240/6169fe4a-b16e-4107-9667-3c45177832cc)
+
+
 ESPHOME-Code:
 
     binary_sensor:
