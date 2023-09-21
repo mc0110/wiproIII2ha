@@ -98,6 +98,8 @@ Furthermore, knowledge of the current status of the central locking system also 
 
 ### Possibility to trigger the alarm system
 If the reed contact of one of the magnetic sensors of the WiProIII is replaced by an optocoupler, the alarm function can also be activated by the Home Assistant instance. This makes it possible, for example, to implement a panic function when the alarm system is armed or to integrate simple zigBee magnetic switches, for example.
+![grafik](https://github.com/mc0110/wiproIII2ha/assets/10268240/139c4a1a-a8c1-4fc1-8d7a-62126544841f)
+
 
 ### Detection of a triggered alarm
 A simple way to detect an alarm from the WiProIII is to evaluate the horn signal. A ZigBee magnetic sensor connected directly to the horn (optocoupler replaces reed contact) enables this without casual cable pulling.
