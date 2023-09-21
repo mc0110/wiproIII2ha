@@ -1,4 +1,4 @@
-# wiproIII2ha
+# WiProIII-2-HA
 Thitronik WiProIII alarm system control via Home Assistant
 
 ## Introduction
