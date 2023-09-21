@@ -14,6 +14,7 @@ There is no connection to the Thitronik company. Even though the solution has wo
 
 The WiProIII Alarm System is supplied with one remote control, but can be extended with additional rc's. When the alarm system is activated, a signal is also sent to the central locking system to lock the vehicle. 
 
+### Modify wireless remote control
 To eliminate first order errors an optocoupler is controlled by the ESP32 with 2 outputs. Only if both outputs are set correctly, the optocoupler is switched through and thus the micro button in the wireless remote control is closed briefly. For this purpose, the remote control is installed in the ESP32 housing in the vehicle. 
 
 ESPHOME-Code: 
@@ -44,6 +45,7 @@ ESPHOME-Code:
             - switch.turn_off: key2
 
 
+### Readout status of central locking
 The status of the central locking system can be registered via two optocouplers running in opposite directions. The pulses (+/-12V) for door opening / locking can thus be reliably detected (2 inputs). With the circuit, the lock is also detected if the second hand transmitter or the vehicle key was used for the lock.
 
 ESPHOME-Code:
@@ -74,16 +76,21 @@ ESPHOME-Code:
         device_class: door
 
 
-With this first expansion stage, the RV can be opened and closed and the status (open/locked/armed) can be distinguished. By means of Home Assistant, it is thus possible to open and also to arm the alarm system, e.g. via mobile phone or an apple watch.
+With this first expansion stage, the RV can be opened and closed and the status (open/locked/armed) can be distinguished. By means of Home Assistant, it is thus possible to open and also to arm the alarm system, e.g. 
+
+#### via mobile phone 
 
 ![grafik](https://github.com/mc0110/wiproIII2ha/assets/10268240/f9a97402-7061-426b-97cd-9484c2bcf2c2)
 
+
+#### or an apple watch.
 
 ![grafik](https://github.com/mc0110/wiproIII2ha/assets/10268240/fb924e6a-26ca-46ce-8ecb-c40e57fee80e)
 
 
 Furthermore, knowledge of the current status of the central locking system also allows the central locking system to be extended to the rear garage doors (e.g. www.rv-tech.de).
 
+### Possibility to trigger the alarm system
 If the reed contact of one of the magnetic sensors of the WiProIII is replaced by an optocoupler, the alarm function can also be activated by the Home Assistant instance. This makes it possible, for example, to implement a panic function when the alarm system is armed or to integrate simple zigBee magnetic switches, for example.
 
 A simple way to detect an alarm from the WiProIII is to evaluate the horn signal. A ZigBee magnetic sensor connected directly to the horn (optocoupler replaces reed contact) enables this without casual cable pulling.
