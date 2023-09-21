@@ -11,7 +11,20 @@ There is no connection to the Thitronik company. Even though the solution has wo
 
 
 ## Schemes
+An alarm system essentially has 3 states (disarmed, armed and triggered).
+A control system must therefore be able to recognise the states and achieve state changes.
 
+State changes:
+The remote control of the WiProIII has a one-button operation for arming/disarming.
+Triggering of the alarm is achieved by any sensor when the system is armed.
+
+Status detection:
+Since the WiProIII controls the central locking, arming also locks the RV or disarming unlocks it. Therefore, if the status of the central locking is detected, the status of the alarm system is also known.
+If the alarm is triggered, this can be recognised by the horn.
+
+Thus, all functions can be very easily connected to the Home Assistant instance via an ESPHOME interface.
+
+## Realisation
 The WiProIII Alarm System is supplied with one remote control, but can be extended with additional rc's. When the alarm system is activated, a signal is also sent to the central locking system to lock the vehicle. 
 
 ### Modify wireless remote control
