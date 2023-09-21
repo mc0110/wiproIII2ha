@@ -16,6 +16,8 @@ The WiProIII Alarm System is supplied with one remote control, but can be extend
 
 ### Modify wireless remote control
 To eliminate first order errors an optocoupler is controlled by the ESP32 with 2 outputs. Only if both outputs are set correctly, the optocoupler is switched through and thus the micro button in the wireless remote control is closed briefly. For this purpose, the remote control is installed in the ESP32 housing in the vehicle. 
+![grafik](https://github.com/mc0110/wiproIII2ha/assets/10268240/1f52a1dc-16f4-4b2a-8032-dff91b2b6df9)
+
 
 ESPHOME-Code: 
 
