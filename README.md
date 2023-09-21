@@ -76,7 +76,8 @@ ESPHOME-Code:
 
 With this first expansion stage, the RV can be opened and closed and the status (open/locked/armed) can be distinguished. By means of Home Assistant, it is thus possible to open and also to arm the alarm system, e.g. via mobile phone or an apple watch.
 
-![grafik](https://github.com/mc0110/wiproIII2ha/assets/10268240/b33f0a4b-b282-4fcf-82b6-d5ef1db2886a)
+![grafik](https://github.com/mc0110/wiproIII2ha/assets/10268240/0124c111-9b20-4397-9576-fa10f60e994a)
+
 
 
 Furthermore, knowledge of the current status of the central locking system also allows the central locking system to be extended to the rear garage doors (e.g. www.rv-tech.de).
