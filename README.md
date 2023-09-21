@@ -78,6 +78,7 @@ With this first expansion stage, the RV can be opened and closed and the status 
 
 ![grafik](https://github.com/mc0110/wiproIII2ha/assets/10268240/0124c111-9b20-4397-9576-fa10f60e994a)
 
+![grafik](https://github.com/mc0110/wiproIII2ha/assets/10268240/fb924e6a-26ca-46ce-8ecb-c40e57fee80e)
 
 
 Furthermore, knowledge of the current status of the central locking system also allows the central locking system to be extended to the rear garage doors (e.g. www.rv-tech.de).
