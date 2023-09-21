@@ -23,7 +23,7 @@ ESPHOME-Code:
 
     - platform: gpio
         pin: 
-        number: ${key1_pin}
+        number: GPIO19
         mode: OUTPUT
         inverted: True
         name: Key1  
@@ -35,7 +35,7 @@ ESPHOME-Code:
             - switch.turn_off: key1
     - platform: gpio
         pin: 
-        number: ${key2_pin}
+        number: GPIO21
         mode: OUTPUT
         inverted: False
         name: Key2  
