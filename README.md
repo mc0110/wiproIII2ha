@@ -6,7 +6,7 @@ The solution I present describes the integration of a Thitronik WiProIII alarm s
 
 It is of course possible to adapt this solution for other alarm systems or other vehicle types.
 
-## Exclusion
+## Disclaimer
 There is no connection to the Thitronik company. Even though the solution has worked for me for several years without any problems and very reliably, I explicitly exclude any liability for replicas. Since an alarm system is a safety-relevant component, any reproduction is at your own risk. I would like to point out that the solution gives the option of opening the vehicle via Home Assistant and deactivating the alarm, which can provide an additional security risk if the HA instance or ESP32 is incorrectly configured.
 
 
