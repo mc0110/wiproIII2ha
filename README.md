@@ -15,12 +15,14 @@ An alarm system essentially has 3 states (disarmed, armed and triggered).
 A control system must therefore be able to recognise the states and achieve state changes.
 
 State changes:
-The remote control of the WiProIII has a one-button operation for arming/disarming.
-Triggering of the alarm is achieved by any sensor when the system is armed.
+- The remote control of the WiProIII has a one-button operation for arming/disarming. So with a modified remote control the Home Assistant can switch the state.
+
+- Triggering of the alarm is achieved by any sensor when the system is armed. If you modify one of the sensors, Home Assistant ist able to trigger an alarm.
 
 Status detection:
-Since the WiProIII controls the central locking, arming also locks the RV or disarming unlocks it. Therefore, if the status of the central locking is detected, the status of the alarm system is also known.
-If the alarm is triggered, this can be recognised by the horn.
+- Since the WiProIII controls the central locking, arming also locks the RV or disarming unlocks it. Therefore, if the status of the central locking is detected, the status of the alarm system is also known.
+
+- If the Home Assistant were able to detect that the horn is running, it could react to a triggered alarm.
 
 Thus, all functions can be very easily connected to the Home Assistant instance via an ESPHOME interface.
 
