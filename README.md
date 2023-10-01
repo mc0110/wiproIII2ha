@@ -38,30 +38,31 @@ To eliminate first order errors an optocoupler is controlled by the ESP32 with 2
 
 ESPHOME-Code: 
 
-    - platform: gpio
-        pin: 
-            number: GPIO19
-            mode: OUTPUT
-            inverted: True
-        name: Key1  
-        id: key1
-        restore_mode: ALWAYS_OFF
-        on_turn_on:
-            then:
-                - delay: 500ms
-                - switch.turn_off: key1
-    - platform: gpio
-        pin: 
-            number: GPIO21
-            mode: OUTPUT
-            inverted: False
-        name: Key2  
-        id: key2
-        restore_mode: ALWAYS_OFF
-        on_turn_on:
-            then:
-                - delay: 1s
-                - switch.turn_off: key2
+    switch:
+        - platform: gpio
+            pin: 
+                number: GPIO19
+                mode: OUTPUT
+                inverted: True
+            name: Key1  
+            id: key1
+            restore_mode: ALWAYS_OFF
+            on_turn_on:
+                then:
+                    - delay: 500ms
+                    - switch.turn_off: key1
+        - platform: gpio
+            pin: 
+                number: GPIO21
+                mode: OUTPUT
+                inverted: False
+            name: Key2  
+            id: key2
+            restore_mode: ALWAYS_OFF
+            on_turn_on:
+                then:
+                    - delay: 1s
+                    - switch.turn_off: key2
 
 
 ### Readout status of central locking
@@ -74,29 +75,29 @@ The status of the central locking system can be registered via two optocouplers 
 ESPHOME-Code:
 
     binary_sensor:
-    - platform: gpio
-        pin:
-          number: GPIO17
-          mode:
-              input: true
-              pullup: true
-          inverted: true
-          filters:
-            - delayed_on_off: 300ms
-        name: "door M1"
-        device_class: door
+        - platform: gpio
+            pin:
+            number: GPIO17
+            mode:
+                input: true
+                pullup: true
+            inverted: true
+            filters:
+                - delayed_on_off: 300ms
+            name: "door M1"
+            device_class: door
 
-    - platform: gpio
-        pin:
-          number: GPIO18
-          mode:
-              input: true
-              pullup: true
-          inverted: true
-          filters:
-            - delayed_on_off: 300ms
-        name: "door M2"
-        device_class: door
+        - platform: gpio
+            pin:
+            number: GPIO18
+            mode:
+                input: true
+                pullup: true
+            inverted: true
+            filters:
+                - delayed_on_off: 300ms
+            name: "door M2"
+            device_class: door
 
 
 With this first expansion stage, the RV can be opened and closed and the status (open/locked/armed) can be distinguished. By means of Home Assistant, it is thus possible to open and also to arm the alarm system, e.g. 
