@@ -47,9 +47,9 @@ ESPHOME-Code:
         id: key1
         restore_mode: ALWAYS_OFF
         on_turn_on:
-        then:
-            - delay: 500ms
-            - switch.turn_off: key1
+            then:
+                - delay: 500ms
+                - switch.turn_off: key1
     - platform: gpio
         pin: 
             number: GPIO21
@@ -59,9 +59,9 @@ ESPHOME-Code:
         id: key2
         restore_mode: ALWAYS_OFF
         on_turn_on:
-        then:
-            - delay: 1s
-            - switch.turn_off: key2
+            then:
+                - delay: 1s
+                - switch.turn_off: key2
 
 
 ### Readout status of central locking
