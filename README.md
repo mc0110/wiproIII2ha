@@ -77,11 +77,11 @@ ESPHOME-Code:
     binary_sensor:
         - platform: gpio
             pin:
-            number: GPIO17
-            mode:
-                input: true
-                pullup: true
-            inverted: true
+                number: GPIO17
+                mode:
+                    input: true
+                    pullup: true
+                inverted: true
             filters:
                 - delayed_on_off: 300ms
             name: "door M1"
@@ -89,11 +89,11 @@ ESPHOME-Code:
 
         - platform: gpio
             pin:
-            number: GPIO18
-            mode:
-                input: true
-                pullup: true
-            inverted: true
+                number: GPIO18
+                mode:
+                    input: true
+                    pullup: true
+                inverted: true
             filters:
                 - delayed_on_off: 300ms
             name: "door M2"
