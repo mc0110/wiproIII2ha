@@ -40,9 +40,9 @@ ESPHOME-Code:
 
     - platform: gpio
         pin: 
-        number: GPIO19
-        mode: OUTPUT
-        inverted: True
+            number: GPIO19
+            mode: OUTPUT
+            inverted: True
         name: Key1  
         id: key1
         restore_mode: ALWAYS_OFF
@@ -52,9 +52,9 @@ ESPHOME-Code:
             - switch.turn_off: key1
     - platform: gpio
         pin: 
-        number: GPIO21
-        mode: OUTPUT
-        inverted: False
+            number: GPIO21
+            mode: OUTPUT
+            inverted: False
         name: Key2  
         id: key2
         restore_mode: ALWAYS_OFF
@@ -76,25 +76,25 @@ ESPHOME-Code:
     binary_sensor:
     - platform: gpio
         pin:
-        number: GPIO17
-        mode:
-            input: true
-            pullup: true
-        inverted: true
-        filters:
-        - delayed_on_off: 300ms
+          number: GPIO17
+          mode:
+              input: true
+              pullup: true
+          inverted: true
+          filters:
+            - delayed_on_off: 300ms
         name: "door M1"
         device_class: door
 
     - platform: gpio
         pin:
-        number: GPIO18
-        mode:
-            input: true
-            pullup: true
-        inverted: true
-        filters:
-        - delayed_on_off: 300ms
+          number: GPIO18
+          mode:
+              input: true
+              pullup: true
+          inverted: true
+          filters:
+            - delayed_on_off: 300ms
         name: "door M2"
         device_class: door
 
